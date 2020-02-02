@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  
+    background-image: url(k.jpg);
+    overflow-y: hidden;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 60%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  x;
+}
+
+/* Fake image */
+/* .fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+} */
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  justify-content: center;
+}
+
+.row{
+  justify-content: center;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+.mb-1, .my-1 {
+    margin-bottom: .0rem!important;
+    margin: 0px;
+    background-color: black;;
+}
+
+
+.jumbotron {
+  background-color: rgba(255, 255, 255, 0.79)!important;
+
+}
+.card{
+  background-color: rgba(255, 255, 255, 0.79)!important;
+  padding: 50px;
+    margin-top: 40px;
+}
+}
+
+
+</style>
+</head>
+<body style="background-image: url(k.jpg);">
+
+
+
+
+
+<!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark primary-color">
+    <a class="navbar-brand" href="#">Pantomath</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link waves-effect waves-light" href="/posts">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" href="#">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" href="/form">Post A blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Join us 
+          </a>
+          <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+            <a class="dropdown-item waves-effect waves-light" href="#">Sign-up</a>
+            <a class="dropdown-item waves-effect waves-light" href="#">Login</a>
+            
+          </div>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+
+
+
+
+
+
+<div class="row">
+  <div class="leftcolumn">
+    
+    
+      <div class="card">
+            <form action="post" method="POST">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1" class="bmd-label-floating">Author</label>
+                      <input name="author"  class="form-control"  placeholder="Your name">
+                      
+                    </div>
+                    <div class="form-group">
+                      <label class="bmd-label-floating">Tags</label>
+                      <input name="tags" class="form-control" placeholder="Separate with spaces" >
+                    </div>
+                    <div class="form-group">
+                            <label class="bmd-label-floating">Category</label>
+                            <input name = "category" class="form-control" placeholder="eg. Travel, Technology ......" >
+                          </div>
+                          <div class="form-group">
+                                <label class="bmd-label-floating">Title</label>
+                                <input name = "title" class="form-control" placeholder="Title" >
+                              </div>
+                    <div class="form-group">
+                      <label for="exampleTextarea" class="bmd-label-floating">Content</label>
+                      <textarea class="form-control" name = "content" id="exampleTextarea" rows="3" placeholder="Your post"></textarea>
+                    </div>
+                    
+                   
+                    <button class="btn btn-default">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-raised">Submit</button>
+                  </form>
+  </div>
+  <div class="rightcolumn">
+   
+    
+  </div>
+</div>
+
+
+
+</body>
+</html>
